@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Search Page</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Calculate Compressive Strength</h1>
+
+    <div class="form">
+        <form action="/predict" method="POST">
+            <input type="number" name="cement" id="cement" placeholder="Cement (kg in a m^3 mixture)">
+            <input type="number" name="blast_furnance_slag" id="blast_furnance_slag" placeholder="Blast Furnace Slag (kg in a m^3 mixture)">
+            <input type="number" name="fly_ash" id="fly_ash" placeholder="Fly Ash (kg in a m^3 mixture)">
+            <input type="number" name="water_component" id="water_component" placeholder="Water (kg in a m^3 mixture)">
+            <input type="number" name="superplasticizer" id="superplasticizer" placeholder="Superplasticizer (component 5)(kg in a m^3 mixture)">
+            <input type="number" name="coarse_aggregate" id="coarse_aggregate"placeholder="Coarse Aggregate (kg in a m^3 mixture)">
+            <input type="number" name="fine_aggregate" id="fine_aggregate" placeholder="Fine Aggregate (kg in a m^3 mixture)">
+            <input type="number" name="age_day" id="age_day" placeholder="Age (day)">
+            
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</div>
+{% endblock %}
