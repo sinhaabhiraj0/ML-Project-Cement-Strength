@@ -8,20 +8,55 @@
 
 {% block body %}
 <div class="content">
-    <h1 style="text-align: center">Calculate Compressive Strength</h1>
+    
 
     <div class="form">
         <form action="/predict" method="POST">
-            <input type="number" name="cement" id="cement" placeholder="Cement (kg in a m^3 mixture)">
-            <input type="number" name="blast_furnance_slag" id="blast_furnance_slag" placeholder="Blast Furnace Slag (kg in a m^3 mixture)">
-            <input type="number" name="fly_ash" id="fly_ash" placeholder="Fly Ash (kg in a m^3 mixture)">
-            <input type="number" name="water_component" id="water_component" placeholder="Water (kg in a m^3 mixture)">
-            <input type="number" name="superplasticizer" id="superplasticizer" placeholder="Superplasticizer (component 5)(kg in a m^3 mixture)">
-            <input type="number" name="coarse_aggregate" id="coarse_aggregate"placeholder="Coarse Aggregate (kg in a m^3 mixture)">
-            <input type="number" name="fine_aggregate" id="fine_aggregate" placeholder="Fine Aggregate (kg in a m^3 mixture)">
-            <input type="number" name="age_day" id="age_day" placeholder="Age (day)">
-            
-            <input type="submit" value="Predict">
+
+            <div class="jumbotron">
+                <h1 class="display-4" style="text-align: center;">Calculate Compressive Strength</h1><br>
+             
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">Weight of Cement</label>
+                      <input type="number" name="cement" id="cement" placeholder="Cement (kg in a m^3 mixture)"  >
+                    
+                    </div>
+                    <div class="form-group">
+                      <label for="formGroupExampleInput2"></label>Weight of Blast Furnace Slag</label>
+                      <input type="number" name="blast_furnance_slag" id="blast_furnance_slag" placeholder="Blast Furnace Slag (kg in a m^3 mixture)"  id="formGroupExampleInput2">
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">Weight of Fly Ash</label>
+                        <input type="number" name="fly_ash" id="fly_ash" placeholder="Fly Ash (kg in a m^3 mixture)" id="formGroupExampleInput" >
+                      </div>
+                      <div class="form-group">
+                        <label for="formGroupExampleInput2">Weight of Water</label>
+                        <input type="number" name="water_component" id="water_component" placeholder="Water (kg in a m^3 mixture)"  id="formGroupExampleInput2">
+                      </div>
+    
+                      <div class="form-group">
+                        <label for="formGroupExampleInput">Weight of Superplasticizer</label>
+                        <input type="number" name="superplasticizer" id="superplasticizer" placeholder="Superplasticizer(kg in a m^3 mixture)"  id="formGroupExampleInput" >
+                      </div>
+                      <div class="form-group">
+                        <label for="formGroupExampleInput2">Weight of Coarse Aggregate</label>
+                        <input type="number" name="coarse_aggregate" id="coarse_aggregate"placeholder="Coarse Aggregate (kg in a m^3 mixture)"  id="formGroupExampleInput2">
+                      </div>
+    
+                      <div class="form-group">
+                        <label for="formGroupExampleInput">Weight of Fine Aggregate</label>
+                        <input type="number" name="fine_aggregate" id="fine_aggregate" placeholder="Fine Aggregate (kg in a m^3 mixture)"  id="formGroupExampleInput" >
+                      </div>
+                      <div class="form-group">
+                        <label for="formGroupExampleInput2">Age</label>
+                        <input type="number" name="age_day" id="age_day" placeholder="Age (day)"  id="formGroupExampleInput2">
+                      </div>
+    
+                 
+                <input class="btn btn-primary btn-lg"  role="button" type="submit" value="Predict" >
+              </div>
+
         </form>
     </div>
 </div>
